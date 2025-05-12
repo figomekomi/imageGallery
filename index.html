@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Galerie d'images</h1>
+        <form id="uploadForm">
+            <input type="file" name="image" id="imageInput" accept="image/*" required>
+            <button type="submit">Uploader</button>
+        </form>
+
+        <div class="filters">
+            <input type="text" id="filterName" placeholder="Nom">
+            <input type="date" id="filterDate">
+            <select id="filterType">
+                <option value="">Type</option>
+                <option value=".jpg">JPG</option>
+                <option value=".jpeg">JPEG</option>
+                <option value=".png">PNG</option>
+            </select>
+            <button onclick="loadImages()">Filtrer</button>
+        </div>
+
+        <div class="gallery" id="gallery"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
